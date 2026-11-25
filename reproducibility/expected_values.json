@@ -1,0 +1,575 @@
+{
+ "main_results": {
+  "ViVOS": {
+   "utterances": 760,
+   "Greedy": "17.35",
+   "LM": "15.06",
+   "Rescore": "14.94",
+   "Rescue": "8.99",
+   "Full8": "8.60",
+   "Full8_CER": "3.89",
+   "caps_LM": 3,
+   "caps_Full8": 0,
+   "covered_utterances": 757,
+   "Rescore_minus_Full8_covered": {
+    "difference": "0.364",
+    "ci95": [
+     "0.000",
+     "0.729"
+    ],
+    "groups": 19
+   },
+   "LM_minus_Full8_covered": {
+    "difference": "0.481",
+    "ci95": [
+     "-0.012",
+     "0.976"
+    ]
+   },
+   "LM_minus_Full8_all": {
+    "difference": "6.46",
+    "ci95": [
+     "0.68",
+     "13.09"
+    ]
+   },
+   "Rescore_minus_Full8_all": {
+    "difference": "6.35",
+    "ci95": [
+     "0.50",
+     "12.90"
+    ]
+   },
+   "LM_with_rescue": "9.104",
+   "covered": {
+    "tokens": 7686
+   },
+   "LM_without_capped": "9.02",
+   "Full8_nonrecurring": {
+    "utterances": 566,
+    "WER": "9.01"
+   },
+   "recurrence": {
+    "seen": {
+     "LM": "16.930",
+     "Rescore": "17.260",
+     "Full8": "6.917"
+    },
+    "unseen": {
+     "LM": "14.603",
+     "Rescore": "14.378",
+     "Full8": "9.010"
+    }
+   }
+  },
+  "LSVSC": {
+   "utterances": 5683,
+   "Greedy": "10.33",
+   "LM": "11.41",
+   "Rescore": "9.84",
+   "Rescue": "8.89",
+   "Full8": "7.58",
+   "Full8_CER": "5.16",
+   "caps_LM": 4,
+   "caps_Full8": 0,
+   "covered_utterances": 5679,
+   "Rescore_minus_Full8_covered": {
+    "difference": "1.310",
+    "ci95": [
+     "1.132",
+     "1.496"
+    ],
+    "groups": 57
+   },
+   "LM_minus_Full8_covered": {
+    "difference": "2.880",
+    "ci95": [
+     "2.527",
+     "3.245"
+    ]
+   },
+   "LM_minus_Full8_all": {
+    "difference": "3.82",
+    "ci95": [
+     "2.89",
+     "4.97"
+    ]
+   },
+   "Rescore_minus_Full8_all": {
+    "difference": "2.25",
+    "ci95": [
+     "1.41",
+     "3.32"
+    ]
+   },
+   "LM_with_rescue": "10.462",
+   "covered": {
+    "tokens": 150097
+   },
+   "relative_reduction_vs_Rescore": "23",
+   "relative_reduction_vs_Greedy": "26.5"
+  },
+  "ViMD": {
+   "utterances": 2026,
+   "Greedy": "15.43",
+   "LM": "16.51",
+   "Rescore": "13.59",
+   "Rescue": "12.75",
+   "Full8": "10.41",
+   "Full8_CER": "7.23",
+   "caps_LM": 1,
+   "caps_Full8": 0,
+   "covered_utterances": 2025,
+   "Rescore_minus_Full8_covered": {
+    "difference": "2.090",
+    "ci95": [
+     "1.774",
+     "2.484"
+    ],
+    "groups": 1344
+   },
+   "LM_minus_Full8_covered": {
+    "difference": "5.013",
+    "ci95": [
+     "4.358",
+     "5.741"
+    ]
+   },
+   "LM_minus_Full8_all": {
+    "difference": "6.10",
+    "ci95": [
+     "4.51",
+     "8.71"
+    ]
+   },
+   "Rescore_minus_Full8_all": {
+    "difference": "3.18",
+    "ci95": [
+     "1.84",
+     "5.60"
+    ]
+   },
+   "LM_with_rescue": "15.671",
+   "covered": {
+    "tokens": 132369
+   },
+   "relative_reduction_vs_Rescore": "23",
+   "relative_reduction_vs_Greedy": "32.5"
+  },
+  "FLEURS": {
+   "utterances": 857,
+   "LM": "33.12",
+   "Rescore": "26.56",
+   "Full8": "17.97",
+   "Full8_CER": "11.16",
+   "caps_LM": 1,
+   "caps_Full8": 0
+  }
+ },
+ "component_retune": {
+  "ViVOS": {
+   "I": {
+    "dev_WER": "8.86",
+    "test_WER": "8.69",
+    "minus_IRT": {
+     "difference": "0.57",
+     "ci95": [
+      "0.01",
+      "1.32"
+     ]
+    },
+    "dev_points": 28,
+    "test_CER": "4.14"
+   },
+   "R": {
+    "dev_WER": "9.16",
+    "test_WER": "8.87",
+    "minus_IRT": {
+     "difference": "0.75",
+     "ci95": [
+      "0.27",
+      "1.33"
+     ]
+    },
+    "dev_points": 32,
+    "test_CER": "4.29"
+   },
+   "T": {
+    "dev_WER": "9.12",
+    "test_WER": "8.84",
+    "minus_IRT": {
+     "difference": "0.73",
+     "ci95": [
+      "0.26",
+      "1.24"
+     ]
+    },
+    "dev_points": 23,
+    "test_CER": "4.34"
+   },
+   "IR": {
+    "dev_WER": "8.81",
+    "test_WER": "8.52",
+    "minus_IRT": {
+     "difference": "0.40",
+     "ci95": [
+      "-0.15",
+      "1.00"
+     ]
+    },
+    "dev_points": 35,
+    "test_CER": "3.92"
+   },
+   "IRT": {
+    "dev_WER": "8.13",
+    "test_WER": "8.12",
+    "dev_points": 32,
+    "test_CER": "3.89"
+   }
+  },
+  "LSVSC": {
+   "I": {
+    "dev_WER": "7.72",
+    "test_WER": "8.11",
+    "minus_IRT": {
+     "difference": "0.71",
+     "ci95": [
+      "0.57",
+      "0.85"
+     ]
+    },
+    "dev_points": 41,
+    "test_CER": "5.56"
+   },
+   "R": {
+    "dev_WER": "7.72",
+    "test_WER": "8.08",
+    "minus_IRT": {
+     "difference": "0.67",
+     "ci95": [
+      "0.54",
+      "0.80"
+     ]
+    },
+    "dev_points": 41,
+    "test_CER": "5.49"
+   },
+   "T": {
+    "dev_WER": "8.11",
+    "test_WER": "8.43",
+    "minus_IRT": {
+     "difference": "1.03",
+     "ci95": [
+      "0.89",
+      "1.17"
+     ]
+    },
+    "dev_points": 13,
+    "test_CER": "5.75"
+   },
+   "IR": {
+    "dev_WER": "7.40",
+    "test_WER": "7.73",
+    "minus_IRT": {
+     "difference": "0.32",
+     "ci95": [
+      "0.25",
+      "0.39"
+     ]
+    },
+    "dev_points": 23,
+    "test_CER": "5.21"
+   },
+   "IRT": {
+    "dev_WER": "7.06",
+    "test_WER": "7.41",
+    "dev_points": 40,
+    "test_CER": "5.13"
+   }
+  },
+  "ViMD": {
+   "I": {
+    "dev_WER": "11.52",
+    "test_WER": "10.58",
+    "minus_IRT": {
+     "difference": "0.86",
+     "ci95": [
+      "0.77",
+      "0.96"
+     ]
+    },
+    "dev_points": 22,
+    "test_CER": "7.44"
+   },
+   "R": {
+    "dev_WER": "11.44",
+    "test_WER": "10.58",
+    "minus_IRT": {
+     "difference": "0.86",
+     "ci95": [
+      "0.76",
+      "0.97"
+     ]
+    },
+    "dev_points": 41,
+    "test_CER": "7.48"
+   },
+   "T": {
+    "dev_WER": "11.90",
+    "test_WER": "11.06",
+    "minus_IRT": {
+     "difference": "1.35",
+     "ci95": [
+      "1.20",
+      "1.51"
+     ]
+    },
+    "dev_points": 18,
+    "test_CER": "7.95"
+   },
+   "IR": {
+    "dev_WER": "10.91",
+    "test_WER": "10.02",
+    "minus_IRT": {
+     "difference": "0.30",
+     "ci95": [
+      "0.24",
+      "0.37"
+     ]
+    },
+    "dev_points": 37,
+    "test_CER": "7.12"
+   },
+   "IRT": {
+    "dev_WER": "10.67",
+    "test_WER": "9.71",
+    "dev_points": 37,
+    "test_CER": "6.96"
+   }
+  }
+ },
+ "pool_oracles": {
+  "ViVOS": {
+   "I": "7.06",
+   "R": "8.29",
+   "T": "7.78",
+   "IR": "6.38",
+   "IRT": "5.53",
+   "selected_IRT": "8.60"
+  },
+  "LSVSC": {
+   "I": "8.45",
+   "R": "8.36",
+   "T": "9.52",
+   "IR": "7.45",
+   "IRT": "6.51",
+   "selected_IRT": "7.58"
+  },
+  "ViMD": {
+   "I": "10.15",
+   "R": "10.35",
+   "T": "10.76",
+   "IR": "9.89",
+   "IRT": "9.43",
+   "selected_IRT": "10.41"
+  }
+ },
+ "length_profiles": {
+  "LSVSC": [
+   {
+    "utterances": 348,
+    "Rescue": "10.55",
+    "Full8": "9.90",
+    "Rescue_minus_Full8": "0.6",
+    "relative_reduction_vs_Rescue": "6",
+    "tokens": 2494
+   },
+   {
+    "utterances": 1486,
+    "Rescue": "9.60",
+    "Full8": "8.90",
+    "Rescue_minus_Full8": "0.7",
+    "relative_reduction_vs_Rescue": "7",
+    "tokens": 22265
+   },
+   {
+    "utterances": 2959,
+    "LM": "11.29",
+    "Rescue": "8.91",
+    "Full8": "7.71",
+    "Rescue_minus_Full8": "1.2",
+    "relative_reduction_vs_Rescue": "13",
+    "tokens": 84145
+   },
+   {
+    "utterances": 890,
+    "LM": "10.89",
+    "Rescue": "8.37",
+    "Full8": "6.47",
+    "Rescue_minus_Full8": "1.9",
+    "relative_reduction_vs_Rescue": "23",
+    "tokens": 41304
+   }
+  ],
+  "ViMD": [
+   {
+    "utterances": 27,
+    "LM": "13.43",
+    "Rescue": "14.39",
+    "Full8": "14.87",
+    "Rescue_minus_Full8": "-0.5",
+    "relative_reduction_vs_Rescue": "-3",
+    "tokens": 417,
+    "edits": {
+     "LM": 56,
+     "Rescue": 60,
+     "Full8": 62
+    }
+   },
+   {
+    "utterances": 286,
+    "Rescue": "13.98",
+    "Full8": "13.07",
+    "Bank32": "15.06",
+    "Rescue_minus_Full8": "0.9",
+    "relative_reduction_vs_Rescue": "7",
+    "tokens": 9003
+   },
+   {
+    "utterances": 1145,
+    "Rescue": "12.35",
+    "Full8": "10.63",
+    "Rescue_minus_Full8": "1.7",
+    "relative_reduction_vs_Rescue": "14",
+    "tokens": 69357
+   },
+   {
+    "utterances": 567,
+    "LM": "19.11",
+    "Rescue": "13.04",
+    "Full8": "9.64",
+    "Rescue_minus_Full8": "3.4",
+    "relative_reduction_vs_Rescue": "26",
+    "tokens": 53686
+   }
+  ]
+ },
+ "bank32": {
+  "ViVOS": {
+   "WER": "8.55",
+   "CER": "3.92",
+   "covered": 760,
+   "oracle_covered": "4.79",
+   "Full8_covered": "8.60",
+   "Bank32_minus_Full8": {
+    "ci95": [
+     "-0.204",
+     "0.135"
+    ]
+   }
+  },
+  "LSVSC": {
+   "WER": "18.72",
+   "CER": "16.20",
+   "covered": 5679,
+   "oracle_covered": "17.86",
+   "Full8_covered": "7.58"
+  },
+  "ViMD": {
+   "WER": "16.26",
+   "CER": "13.03",
+   "covered": 2024,
+   "oracle_covered": "15.43",
+   "Full8_covered": "10.41"
+  },
+  "FLEURS": {
+   "WER": "34.82",
+   "CER": "29.65",
+   "covered": 856,
+   "oracle_covered": "33.30",
+   "Full8_covered": "17.96"
+  }
+ },
+ "training_trials": {
+  "e1_xlsr_s0": {
+   "best_dev_CER": "7.80"
+  },
+  "e1_xlsr_s1": {
+   "best_dev_CER": "8.16"
+  },
+  "e1_xlsr_s2": {
+   "best_dev_CER": "7.99"
+  },
+  "e1_mhubert_s0": {
+   "best_dev_CER": "9.61"
+  },
+  "e1_mhubert_s1": {
+   "best_dev_CER": "8.95"
+  },
+  "e1_mhubert_s2": {
+   "best_dev_CER": "9.42"
+  },
+  "ab_ctcw0.0": {
+   "best_dev_CER": "7.91"
+  },
+  "ab_ctcw0.6": {
+   "best_dev_CER": "8.08"
+  },
+  "g3_vimd_c5_s0": {
+   "best_dev_CER": "12.29"
+  },
+  "x_lsvsc": {
+   "best_dev_CER": "8.19"
+  },
+  "x_lsvsc2": {
+   "best_dev_CER": "7.90"
+  },
+  "x_vimd": {
+   "best_dev_CER": "20.63"
+  },
+  "x_vimd2": {
+   "best_dev_CER": "16.84"
+  },
+  "x_vimd3": {
+   "best_dev_CER": "14.61"
+  },
+  "L_vivos_s0": {
+   "best_epoch": 47
+  },
+  "f_vivos_s3": {
+   "best_dev_CER": "7.92",
+   "best_epoch": 35
+  },
+  "f_vivos_s4": {
+   "best_dev_CER": "8.26",
+   "best_epoch": 39
+  },
+  "fl_lsvsc_s0": {
+   "best_dev_CER": "7.05",
+   "best_epoch": 26
+  },
+  "fl_lsvsc_s1": {
+   "best_dev_CER": "6.90",
+   "best_epoch": 26
+  },
+  "fl_lsvsc_s2": {
+   "best_dev_CER": "7.66",
+   "best_epoch": 24
+  },
+  "f_vimd_s0": {
+   "best_dev_CER": "10.73",
+   "best_epoch": 25
+  },
+  "f_vimd_s1": {
+   "best_dev_CER": "11.51",
+   "best_epoch": 32
+  },
+  "f_vimd_s2": {
+   "best_dev_CER": "13.00",
+   "best_epoch": 27
+  },
+  "single_schedule_within_staged_epochs": {
+   "fl_lsvsc_s0": "7.27"
+  }
+ }
+}

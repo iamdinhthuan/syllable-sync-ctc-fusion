@@ -1,0 +1,106 @@
+{
+ "created_utc": "2026-11-18T05:21:47.217214+00:00",
+ "purpose": "Equal-budget per-subset development retune of component CTC evidence (I,R,T,IR,IRT) at beam 8; decode only, no training",
+ "status": "frozen_before_any_decode",
+ "headline_policy": "Main-paper Full8 rows stay the original frozen controls; retuned IRT appears only in the equal-budget control table",
+ "test_policy": "All 15 selections frozen (ALL_FROZEN.json) before any test decode; each test runs once; no grid extension after test",
+ "subsets": {
+  "I": [
+   3,
+   0,
+   0
+  ],
+  "R": [
+   0,
+   3,
+   0
+  ],
+  "T": [
+   0,
+   0,
+   3
+  ],
+  "IR": [
+   1.5,
+   1.5,
+   0
+  ],
+  "IRT": [
+   1,
+   1,
+   1
+  ]
+ },
+ "lambda_grid": [
+  0.05,
+  0.1,
+  0.2,
+  0.3,
+  0.5,
+  0.7,
+  0.9
+ ],
+ "lambda_max": 0.95,
+ "beta_offsets": [
+  -1,
+  -0.5,
+  0.5,
+  1
+ ],
+ "alpha_offsets": [
+  -0.15,
+  0.15
+ ],
+ "beta_step": 0.5,
+ "alpha_step": 0.15,
+ "max_bracket_rounds": 6,
+ "reproduction_tolerance_wer": 0.02,
+ "selection_rule": "minimum development WER, then CER, |beta|, alpha, beta (decoder rule)",
+ "search_settings": {
+  "beam": 8,
+  "lex": "lm",
+  "no_unk": true,
+  "attention_weights": [
+   1,
+   1,
+   1
+  ],
+  "max_batch_seconds": 40
+ },
+ "concurrency": 6,
+ "lane_priority": [
+  "ViMD",
+  "LSVSC",
+  "ViVOS"
+ ],
+ "jobs": [
+  {
+   "corpus": "ViVOS",
+   "run": "/data/runs/L_vivos_s0",
+   "root": "/data/vdata/vivos/vivos",
+   "lm": "/data/code/lm4_vivos.pt",
+   "full_parameters": "0.3:0.7:3"
+  },
+  {
+   "corpus": "LSVSC",
+   "run": "/data/runs/fl_lsvsc_s0",
+   "root": "/data/vdata/prep/lsvsc",
+   "lm": "/data/code/lm4_lsvsc.pt",
+   "full_parameters": "0.7:0.5:1.5"
+  },
+  {
+   "corpus": "ViMD",
+   "run": "/data/runs/f_vimd_s0",
+   "root": "/data/vdata/prep/vimd",
+   "lm": "/data/code/lm4_vimd.pt",
+   "full_parameters": "0.5:0.4:2"
+  }
+ ],
+ "known_limits": [
+  "test sets were inspected in earlier research; exploratory, not confirmatory",
+  "local bracketing does not establish a global optimum",
+  "IRT historical setting was chosen with more exploratory development; this run gives all five subsets the same budget"
+ ],
+ "alpha_floor": 0.0,
+ "resources_note": "H100 shared lease 32 GiB VRAM, 12 CPUs; concurrency 6 decoder processes"
+}

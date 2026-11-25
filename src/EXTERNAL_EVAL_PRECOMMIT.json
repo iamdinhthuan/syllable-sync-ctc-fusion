@@ -1,0 +1,52 @@
+{
+  "title": "Locally precommitted external ASR test; not a public preregistration",
+  "created_utc": "2026-11-17T03:21:32.048485+00:00",
+  "test_content_loaded_at_commit": false,
+  "dataset": {
+    "repo": "google/fleurs",
+    "revision": "168de341b3db6859a9bac1c50a2ef5e3b47647e0",
+    "config": "vi_vn",
+    "split": "test",
+    "file": "vi_vn/test/0000.parquet",
+    "sha256": "65325be18bef84bb97b5bad1145958ae752919bb0b6696e7cfa8409ef5c46c77",
+    "bytes": 691128728,
+    "license": "CC-BY-4.0",
+    "source": "https://huggingface.co/datasets/google/fleurs"
+  },
+  "model_preselected": {
+    "training_corpus": "ViMD",
+    "acoustic_seed": 0,
+    "checkpoint": "/data/runs/f_vimd_s0/best.pt",
+    "checkpoint_bytes": 1286066073,
+    "reason": "Preselected multi-dialect checkpoint; no selection on FLEURS scores",
+    "LM": "/data/code/lm4_vimd.pt"
+  },
+  "settings": {
+    "LM": "0:0.3:1.5",
+    "full": "0.5:0.4:2",
+    "beam": 8,
+    "no_unk": true,
+    "lex": "lm",
+    "component_weights": [
+      1,
+      1,
+      1
+    ],
+    "bounds": "own valid encoder frames + EOS, clipped only by model positional capacity"
+  },
+  "comparisons": [
+    "LM proposal search",
+    "same-list CPU completed-component CTC rescoring under full objective",
+    "online component-prefix fusion"
+  ],
+  "policy": {
+    "external_parameter_tuning": false,
+    "external_reference_ngrams_used_to_filter_training_text": false,
+    "all_test_utterances": true,
+    "report_negative_results": true,
+    "oracle_uses_references_after_predictions_only": true,
+    "no_parameter_changes_after_external_metrics": "Any later change requires a separately labeled exploratory follow-up; the first result remains reported"
+  },
+  "normalization": "Reuse existing train_vivos.load_split/tok normalization, no FLEURS-specific spelling or number rules",
+  "interpretation": "Previously unused project-level external evaluation; encoder/LM pretraining overlap is not certified absent. Existing in-domain settings have historical adaptive exposure."
+}

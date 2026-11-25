@@ -1,0 +1,6 @@
+{
+ "created_utc": "2026-11-18T07:25:00Z",
+ "reason": "Worker pod disappeared at ~07:05 UTC while the job was running (cluster no longer found; shared-lease worker, cause not observed). No test decode had started; no selection had been frozen.",
+ "change": "Runner gains stage-level resume only: a dev stage with a completed result_full.json is reloaded (its grid must equal the grid the frozen rule recomputes), an incomplete stage directory is archived and the same grid is rerun; an incomplete test directory is archived and rerun. Grid, selection rule, bracketing rule and test policy are unchanged. ViMD dev stages are executed as one decoder call per grid point (directories dev_<stage>_pNN) so that a lost worker loses at most one point; the ViMD partial stage-A attempts are archived as incomplete. Grid points and selection are unchanged.",
+ "plan_unchanged": true
+}

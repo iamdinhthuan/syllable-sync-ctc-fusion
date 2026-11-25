@@ -1,0 +1,56 @@
+{
+  "purpose": "Frozen reference-free historical-test replay, not independent confirmation",
+  "settings_fixed_before_corrected_test_runs": true,
+  "gpu_limit": 1,
+  "jobs": [
+    {
+      "corpus": "ViVOS",
+      "run": "/data/runs/L_vivos_s0",
+      "root": "/data/vdata/vivos/vivos",
+      "lm": "/data/code/lm4_vivos.pt",
+      "lm_parameters": "0:0.7:5",
+      "full_parameters": "0.3:0.7:3"
+    },
+    {
+      "corpus": "LSVSC",
+      "run": "/data/runs/fl_lsvsc_s0",
+      "root": "/data/vdata/prep/lsvsc",
+      "lm": "/data/code/lm4_lsvsc.pt",
+      "lm_parameters": "0:0.5:2",
+      "full_parameters": "0.7:0.5:1.5"
+    },
+    {
+      "corpus": "ViMD",
+      "run": "/data/runs/f_vimd_s0",
+      "root": "/data/vdata/prep/vimd",
+      "lm": "/data/code/lm4_vimd.pt",
+      "lm_parameters": "0:0.3:1.5",
+      "full_parameters": "0.5:0.4:2"
+    }
+  ],
+  "shared": {
+    "beam": 8,
+    "lex": "lm",
+    "no_unk": true,
+    "attention_weights": [
+      1,
+      1,
+      1
+    ],
+    "ctc_weights": [
+      1,
+      1,
+      1
+    ],
+    "max_batch_seconds": 40
+  },
+  "stages": [
+    "validate_existing_single_setting_on_development",
+    "freeze_with_model_LM_inventory_hashes",
+    "LM_test_export_complete_Nbest_CTC_values",
+    "online_prefix_test",
+    "CPU_Nbest_rescore_under_full_objective",
+    "oracle_analysis_after_hypothesis_selection"
+  ],
+  "selection_history": "Parameters originate in the historical exploratory development; no claim of erased test exposure."
+}
