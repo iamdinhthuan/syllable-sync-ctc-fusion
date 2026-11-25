@@ -6,3 +6,4 @@ soundfile
 pyarrow
 rapidfuzz
 matplotlib
+huggingface_hub

@@ -16,7 +16,7 @@ syllable language model (LM). Termination uses exact completed-sequence likeliho
 | `retune/` | Common development-retune runner for the component subsets (`run_retune.py`), its frozen plan (`PLAN.json`) and the recorded amendment (`AMENDMENT_1.json`). |
 | `bank32/` | The wider completed-bank control (Bank32) reported in the supplement. |
 | `lm/` | External text preparation and syllable/character LM training. |
-| `data_prep/` | Conversion of the LSVSC and ViMD Parquet releases and the character inventory. |
+| `data_prep/` | Download of all corpora at pinned revisions (`download_data.py`), conversion of the LSVSC and ViMD Parquet releases, and the character inventory. |
 | `tests/` | Exhaustive small-alphabet check of the component CTC prefix recurrences (Supplementary Section S1). |
 | `reproducibility/` | Per-utterance records and scripts that regenerate every reference-independent number and data figure of the paper; see `reproducibility/README.md`. |
 
@@ -38,10 +38,13 @@ Training and decoding need a GPU, the speech corpora and the pretrained encoder 
 
 ## Data
 
-No audio, model weights or ViVOS/ViMD transcripts are included. The corpora are available from their
-providers under their own licenses:
+No audio, model weights or ViVOS/ViMD transcripts are included. `data_prep/download_data.py` downloads every
+corpus below from the Hugging Face Hub at pinned revisions into the layout the other scripts expect
+(`python data_prep/download_data.py --root DATA_DIR`, or `--only vivos fleurs`, or `--dry-run`). FLEURS is pinned to
+the exact revision used in the paper and its SHA-256 is verified; the other pins are the revisions at release time.
+The corpora keep their own licenses:
 
-- ViVOS: https://huggingface.co/datasets/AILAB-VNUHCM/vivos (CC BY-NC-SA 4.0)
+- ViVOS: https://huggingface.co/datasets/AILAB-VNUHCM/vivos (original release: https://zenodo.org/records/7068130; CC BY-NC-SA 4.0)
 - LSVSC: https://huggingface.co/datasets/doof-ferb/LSVSC (CC BY 4.0)
 - ViMD: https://huggingface.co/datasets/nguyendv02/ViMD_Dataset (CC BY-NC-ND 4.0)
 - FLEURS (Vietnamese test): https://huggingface.co/datasets/google/fleurs
