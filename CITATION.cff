@@ -2,6 +2,9 @@ cff-version: 1.2.0
 message: "If you use this code, please cite the accompanying manuscript."
 title: "Alignment-Aware Syllable-Synchronous CTC Fusion for Tonal Speech Recognition: code and reproducibility package"
 license: MIT
+version: "1.0.0"
+doi: "10.5281/zenodo.24521563"
+repository-code: "https://github.com/iamdinhthuan/syllable-sync-ctc-fusion"
 authors:
   - {family-names: Nguyen, given-names: Dinh Thuan, orcid: "https://orcid.org/0000-0003-2997-6667"}
   - {family-names: Nguyen, given-names: Lam Phuong, orcid: "https://orcid.org/0000-0002-1471-5221"}

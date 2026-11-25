@@ -1,7 +1,9 @@
 # Alignment-Aware Syllable-Synchronous CTC Fusion for Tonal Speech Recognition
 
 Code and reproducibility package for the manuscript *Alignment-Aware Syllable-Synchronous Connectionist
-Temporal Classification Fusion for Tonal Speech Recognition* (under review). A Vietnamese syllable is
+Temporal Classification Fusion for Tonal Speech Recognition* (under review). Archived version: https://doi.org/10.5281/zenodo.24521563 (v1.0.0).
+
+A Vietnamese syllable is
 factorized into initial, rhyme and tone labels; each syllable candidate in beam search advances the
 independently marginalized CTC prefixes of all three components, and the evidence is fused with attention and a
 syllable language model (LM). Termination uses exact completed-sequence likelihoods.
