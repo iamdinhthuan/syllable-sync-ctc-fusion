@@ -1,7 +1,6 @@
 # Reproducibility package
 
-Supplementary data for "Syllable-Synchronous Component CTC Fusion for Tonal Speech Recognition:
-A Vietnamese Case Study".
+Supplementary data for "Alignment-Marginalized Multi-Stream Sequence Estimation With Connectionist Temporal Classification for Tonal Speech Recognition".
 
 The package contains the saved decoder outputs behind the reference-independent result tables and
 data figures of the article and its supplement, as per-utterance records, together with the scripts that regenerate the reported numbers
