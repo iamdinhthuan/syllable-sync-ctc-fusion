@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the accompanying manuscript."
-title: "Alignment-Aware Syllable-Synchronous CTC Fusion for Tonal Speech Recognition: code and reproducibility package"
+title: "Alignment-Marginalized Multi-Stream Sequence Estimation With Connectionist Temporal Classification for Tonal Speech Recognition: code and reproducibility package"
 license: MIT
 version: "1.0.1"
 doi: "10.5281/zenodo.24521562"

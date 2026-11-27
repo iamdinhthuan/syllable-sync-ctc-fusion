@@ -1,7 +1,6 @@
-# Alignment-Aware Syllable-Synchronous CTC Fusion for Tonal Speech Recognition
+# Alignment-Marginalized Multi-Stream Sequence Estimation With CTC for Tonal Speech Recognition
 
-Code and reproducibility package for the manuscript *Alignment-Aware Syllable-Synchronous Connectionist
-Temporal Classification Fusion for Tonal Speech Recognition* (under review). Archived on Zenodo: https://doi.org/10.5281/zenodo.24521562 (all versions); v1.0.0 is https://doi.org/10.5281/zenodo.24521563 and v1.0.1 adds the dataset download script.
+Code and reproducibility package for the manuscript *Alignment-Marginalized Multi-Stream Sequence Estimation With Connectionist Temporal Classification for Tonal Speech Recognition* (under review). Archived on Zenodo: https://doi.org/10.5281/zenodo.24521562 (all versions); v1.0.0 is https://doi.org/10.5281/zenodo.24521563 and v1.0.1 adds the dataset download script.
 
 A Vietnamese syllable is
 factorized into initial, rhyme and tone labels; each syllable candidate in beam search advances the
