@@ -1,6 +1,6 @@
 # Alignment-Marginalized Multi-Stream Sequence Estimation With CTC for Tonal Speech Recognition
 
-Code and reproducibility package for the manuscript *Alignment-Marginalized Multi-Stream Sequence Estimation With Connectionist Temporal Classification for Tonal Speech Recognition* (under review). Archived on Zenodo: https://doi.org/10.5281/zenodo.24521562 (all versions); v1.0.0 is https://doi.org/10.5281/zenodo.24521563 and v1.0.1 adds the dataset download script.
+Code and reproducibility package for the manuscript *Alignment-Marginalized Multi-Stream Sequence Estimation With Connectionist Temporal Classification for Tonal Speech Recognition* (under review). Archived on Zenodo: https://doi.org/10.5281/zenodo.24521562 (all versions); v1.0.0 is https://doi.org/10.5281/zenodo.24521563, v1.0.1 adds the dataset download script, and v1.0.2 updates the manuscript title in the documentation.
 
 A Vietnamese syllable is
 factorized into initial, rhyme and tone labels; each syllable candidate in beam search advances the
